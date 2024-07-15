@@ -1,3 +1,5 @@
+import UploadFile from '../UploadFile/UploadFile';
+
 const Home = () => {
 	return (
 		<>

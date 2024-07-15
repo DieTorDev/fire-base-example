@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { collection, getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -19,4 +20,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const blogCollectionReference = collection(db, 'Blog');
 
-export { auth, blogCollectionReference };
+const storage = getStorage(app);
+
+export { auth, blogCollectionReference, storage };
